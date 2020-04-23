@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.helloworld.springboot.mapper.HouseFundMapper">
+  <resultMap id="BaseResultMap" type="com.helloworld.springboot.model.HouseFund">
+    <!--@mbg.generated-->
+    <!--@Table house_fund-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="business_time"  property="businessTime" />
+    <result column="company_no" jdbcType="VARCHAR" property="companyNo" />
+    <result column="company_name" jdbcType="VARCHAR" property="companyName" />
+    <result column="type_name" jdbcType="VARCHAR" property="typeName" />
+    <result column="business_year_month" jdbcType="VARCHAR" property="businessYearMonth" />
+    <result column="add" jdbcType="BIGINT" property="add" />
+    <result column="sub" jdbcType="BIGINT" property="sub" />
+    <result column="money" jdbcType="DECIMAL" property="money" />
+    <result column="pay_company_name" jdbcType="VARCHAR" property="payCompanyName" />
+    <result column="operate_platform_name" jdbcType="VARCHAR" property="operatePlatformName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, business_time, company_no, company_name, type_name, business_year_month, `add`, 
+    sub, money, pay_company_name, operate_platform_name
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from house_fund
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+    <select id="getAllHouseFundList" resultMap="BaseResultMap">
+        select * from house_fund;
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    <!--@mbg.generated-->
+    delete from house_fund
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.helloworld.springboot.model.HouseFund" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into house_fund (business_time, company_no, company_name, 
+      type_name, business_year_month, `add`, 
+      sub, money, pay_company_name, 
+      operate_platform_name)
+    values (#{businessTime,jdbcType=TIMESTAMP}, #{companyNo,jdbcType=VARCHAR}, #{companyName,jdbcType=VARCHAR}, 
+      #{typeName,jdbcType=VARCHAR}, #{businessYearMonth,jdbcType=DATE}, #{add,jdbcType=BIGINT}, 
+      #{sub,jdbcType=BIGINT}, #{money,jdbcType=BIGINT}, #{payCompanyName,jdbcType=VARCHAR}, 
+      #{operatePlatformName,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.helloworld.springboot.model.HouseFund" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into house_fund
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="businessTime != null">
+        business_time,
+      </if>
+      <if test="companyNo != null">
+        company_no,
+      </if>
+      <if test="companyName != null">
+        company_name,
+      </if>
+      <if test="typeName != null">
+        type_name,
+      </if>
+      <if test="businessYearMonth != null">
+        business_year_month,
+      </if>
+      <if test="add != null">
+        `add`,
+      </if>
+      <if test="sub != null">
+        sub,
+      </if>
+      <if test="money != null">
+        money,
+      </if>
+      <if test="payCompanyName != null">
+        pay_company_name,
+      </if>
+      <if test="operatePlatformName != null">
+        operate_platform_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="businessTime != null">
+        #{businessTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="companyNo != null">
+        #{companyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="companyName != null">
+        #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="typeName != null">
+        #{typeName,jdbcType=VARCHAR},
+      </if>
+      <if test="businessYearMonth != null">
+        #{businessYearMonth,jdbcType=DATE},
+      </if>
+      <if test="add != null">
+        #{add,jdbcType=BIGINT},
+      </if>
+      <if test="sub != null">
+        #{sub,jdbcType=BIGINT},
+      </if>
+      <if test="money != null">
+        #{money,jdbcType=BIGINT},
+      </if>
+      <if test="payCompanyName != null">
+        #{payCompanyName,jdbcType=VARCHAR},
+      </if>
+      <if test="operatePlatformName != null">
+        #{operatePlatformName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.helloworld.springboot.model.HouseFund">
+    <!--@mbg.generated-->
+    update house_fund
+    <set>
+      <if test="businessTime != null">
+        business_time = #{businessTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="companyNo != null">
+        company_no = #{companyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="companyName != null">
+        company_name = #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="typeName != null">
+        type_name = #{typeName,jdbcType=VARCHAR},
+      </if>
+      <if test="businessYearMonth != null">
+        business_year_month = #{businessYearMonth,jdbcType=DATE},
+      </if>
+      <if test="add != null">
+        `add` = #{add,jdbcType=BIGINT},
+      </if>
+      <if test="sub != null">
+        sub = #{sub,jdbcType=BIGINT},
+      </if>
+      <if test="money != null">
+        money = #{money,jdbcType=BIGINT},
+      </if>
+      <if test="payCompanyName != null">
+        pay_company_name = #{payCompanyName,jdbcType=VARCHAR},
+      </if>
+      <if test="operatePlatformName != null">
+        operate_platform_name = #{operatePlatformName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.helloworld.springboot.model.HouseFund">
+    <!--@mbg.generated-->
+    update house_fund
+    set business_time = #{businessTime,jdbcType=TIMESTAMP},
+      company_no = #{companyNo,jdbcType=VARCHAR},
+      company_name = #{companyName,jdbcType=VARCHAR},
+      type_name = #{typeName,jdbcType=VARCHAR},
+      business_year_month = #{businessYearMonth,jdbcType=DATE},
+      `add` = #{add,jdbcType=BIGINT},
+      sub = #{sub,jdbcType=BIGINT},
+      money = #{money,jdbcType=BIGINT},
+      pay_company_name = #{payCompanyName,jdbcType=VARCHAR},
+      operate_platform_name = #{operatePlatformName,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
