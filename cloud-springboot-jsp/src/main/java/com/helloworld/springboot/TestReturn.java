@@ -1,21 +1,24 @@
 package com.helloworld.springboot;
 
-import java.util.concurrent.TimeUnit;
+import com.helloworld.springboot.model.User;
+import org.modelmapper.ModelMapper;
 
 public class TestReturn {
-
-    public static String printNumber(){
-        String name = Thread.currentThread().getName();
-        System.out.println("threadName="+name);
-        try {
-            TimeUnit.SECONDS.sleep(3);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        return printNumber();
-    }
-
     public static void main(String[] args) {
-        new Thread(()->{printNumber();},"A").start();
+
+        //modelMapper
+        ModelMapper modelMapper = new ModelMapper();
+
+        User user = new User(12,"zhangsan");
+        User modelMapperUser = modelMapper.map(user, User.class);
+
+        System.out.println(user == modelMapperUser);
+        System.out.println(modelMapperUser.toString());
+
+        System.out.println("---------------------------");
+        modelMapperUser.setAge(18);
+        System.out.println(user.toString());
+        System.out.println(modelMapperUser.toString());
+
     }
 }
