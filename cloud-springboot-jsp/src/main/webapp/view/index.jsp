@@ -15,23 +15,15 @@
 <body>
 
     <div>
-        <h1>${name}</h1>
+        <h1>personConfig = ${personConfig}</h1>
     </div>
 
     <div class="container-fluid">
         <table id="tableId" class="table table-condensed" style="width: 1212px;">
             <thead>
             <tr>
-                <th>业务发生日期</th>
-                <th>单位登记号</th>
-                <th>账户名称</th>
-                <th>业务类型</th>
-                <th>汇缴年月</th>
-                <th>增加金额</th>
-                <th>减少金额</th>
-                <th>余额</th>
-                <th>缴款单位</th>
-                <th>操作平台</th>
+                <th>日期</th>
+
             </tr>
             </thead>
         </table>
@@ -39,7 +31,7 @@
 
 <script type="text/javascript">
     $(function(){
-        loadTable();
+        //loadTable();
     });
 
     function loadTable(){
@@ -53,16 +45,7 @@
                 for (var index in data) {
                     var row = data[index];
                     tBody += '<tr>\n' +
-                                    '<td >'+row.businessTime+'</td>\n' +
-                                    '<td >'+row.companyNo+'</td>\n' +
-                                    '<td >'+row.companyName+'</p></td>\n' +
-                                    '<td >'+row.typeName+'</p></td>\n' +
-                                    '<td >'+row.businessYearMonth+'</p></td>\n' +
-                                    '<td >'+row.add+'</p></td>\n' +
-                                    '<td >'+row.sub+'</p></td>\n' +
-                                    '<td >'+row.money+'</p></td>\n' +
-                                    '<td >'+row.payCompanyName+'</p></td>\n' +
-                                    '<td >'+row.operatePlatformName+'</p></td>\n' +
+                                    '<td >'+row.createTime+'</td>\n' +
                             '</tr>';
                 }
                 $("#tableId").append(tBody);

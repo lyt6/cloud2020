@@ -1,30 +1,25 @@
 package com.helloworld.springboot.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import org.springframework.beans.factory.annotation.Value;
+import com.helloworld.springboot.config.PersonConfig;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+@Slf4j
 @Controller
 public class IndexController {
 
-    @Value("${person.name}")
-    private String name;
-
-    @Value("${person.age}")
-    private Integer age;
-
-    @Value("${person.addr}")
-    private String addr;
-
-    @Value("${sitetArray}")
-    private String[] sitetArray;
+    @Autowired
+    private PersonConfig personConfig;
 
     @RequestMapping("/")
     public String toIndex(Model model){
-        model.addAttribute("name", "hello world !"+" name="+name+" age="+String.valueOf(age)+ " addr="+addr);
-        System.out.println(JSONObject.toJSONString(sitetArray));
+        model.addAttribute("personConfig", JSONObject.toJSONString(personConfig));
+        log.info("personConfig:{}",JSONObject.toJSONString(personConfig));
         return "index";
     }
+
 }
