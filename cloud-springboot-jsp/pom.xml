@@ -110,6 +110,17 @@
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
         </dependency>
+        <!--mybatis-plus-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-core</artifactId>
+            <version>3.2.0</version>
+        </dependency>
 
     </dependencies>
 
