@@ -19,7 +19,7 @@
         </dependency>
         <!--自定义api通用包-->
         <dependency>
-            <groupId>com.helloworld.springcloud</groupId>
+            <groupId>com.hello.springcloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
             <version>${project.version}</version>
         </dependency>

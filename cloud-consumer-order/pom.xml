@@ -13,7 +13,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.helloworld.springcloud</groupId>
+            <groupId>com.hello.springcloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
             <version>${project.version}</version>
         </dependency>
