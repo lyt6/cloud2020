@@ -1,11 +1,11 @@
-package com.helloworld.springboot;
+package com.hello.jsp.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringbootJspApplication {
+public class JspApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootJspApplication.class, args);
+        SpringApplication.run(JspApplication.class, args);
     }
 }

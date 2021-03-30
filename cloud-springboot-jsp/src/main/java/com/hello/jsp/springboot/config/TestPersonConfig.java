@@ -1,4 +1,4 @@
-package com.helloworld.springboot.config;
+package com.hello.jsp.springboot.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -10,7 +10,7 @@ import java.util.Map;
 @Data
 @Component
 @ConfigurationProperties(prefix = "person")
-public class PersonConfig {
+public class TestPersonConfig {
     private String name;
     private Integer age;
     private boolean man;

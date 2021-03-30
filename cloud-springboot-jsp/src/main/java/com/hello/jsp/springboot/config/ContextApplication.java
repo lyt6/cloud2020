@@ -1,4 +1,4 @@
-package com.helloworld.springboot.config;
+package com.hello.jsp.springboot.config;
 
 import org.springframework.web.context.ServletContextAware;
 

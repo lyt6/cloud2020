@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.helloworld.springcloud</groupId>
+    <groupId>com.hello.springcloud</groupId>
     <artifactId>cloud2020</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>cloud-provider-payment</module>
         <module>cloud-consumer-order</module>
@@ -102,6 +102,33 @@
                 <artifactId>log4j</artifactId>
                 <version>${log4j.version}</version>
             </dependency>
+            <!-- code generator -->
+            <dependency>
+                <groupId>com.github.davidfantasy</groupId>
+                <artifactId>mybatis-plus-generator-ui</artifactId>
+                <version>1.4.2</version>
+                <scope>test</scope>
+            </dependency>
+            <!-- code generator -->
+            <!-- swagger2 -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>2.7.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>2.7.0</version>
+            </dependency>
+            <!-- swagger2 -->
+            <!-- knife4j -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>1.9.6</version>
+            </dependency>
+            <!-- knife4j -->
         </dependencies>
     </dependencyManagement>
 
@@ -117,5 +144,18 @@
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>aliyun</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
 </project>

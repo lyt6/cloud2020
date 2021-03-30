@@ -1,4 +1,4 @@
-package com.helloworld.springboot.entities;
+package com.hello.jsp.springboot.entity.base;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -15,11 +15,11 @@ public class BaseEntity extends IdEntity {
      * 创建时间
      */
     @TableField(fill = FieldFill.INSERT)
-    protected Date createdTime;
+    protected Date createTime;
     /**
      * 更新时间
      */
     @TableField(fill = FieldFill.INSERT_UPDATE)
-    protected Date modifiedTime;
+    protected Date updateTime;
 
 }

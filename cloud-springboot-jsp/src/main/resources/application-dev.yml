@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloud2020?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false&rewriteBatchedStatements=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+
+person:
+  name: 张三
+  age: 18
+  man: true
+  list:
+    - 1
+    - 2
+    - 3
+  map: { key1:1,key2:2 }
+  son:
+    name: 张三三
+    age: 5
