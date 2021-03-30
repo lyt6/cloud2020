@@ -15,7 +15,7 @@ public class BeanHelper implements ApplicationContextAware {
         applicationContext = ctx;
     }
 
-    public static <T> T getBean(Class clazz){
-        return (T)applicationContext.getBean(clazz);
+    public static <T> T getBean(Class clazz) {
+        return (T) applicationContext.getBean(clazz);
     }
 }

@@ -30,7 +30,7 @@ person:
     - 1
     - 2
     - 3
-  map: {key1:1,key2:2}
+  map: { key1:1,key2:2 }
   son:
     name: 张三三
     age: 5

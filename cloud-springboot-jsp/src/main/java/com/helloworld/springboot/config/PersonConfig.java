@@ -14,7 +14,7 @@ public class PersonConfig {
     private String name;
     private Integer age;
     private boolean man;
-    private Map<String,Object> map;
+    private Map<String, Object> map;
     private List<Integer> list;
     private Son son;
 }

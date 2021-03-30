@@ -17,8 +17,8 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @GetMapping("/{id}")
-    public CommonResult getById(@PathVariable(value = "id") Integer id){
+    public CommonResult getById(@PathVariable(value = "id") Integer id) {
         Payment payment = paymentService.getById(id);
-        return new CommonResult(200,"ok",payment);
+        return new CommonResult(200, "ok", payment);
     }
 }

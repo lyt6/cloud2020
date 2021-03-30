@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class HouseFundServiceImplTest {
 
     @Test
-    public void testBean(){
+    public void testBean() {
 
         // default singleton
         HouseFund bean1 = (HouseFund) BeanHelper.getBean(HouseFund.class);

@@ -9,7 +9,7 @@ public class TestReturn {
         //modelMapper
         ModelMapper modelMapper = new ModelMapper();
 
-        User user = new User(12,"zhangsan");
+        User user = new User(12, "zhangsan");
         User modelMapperUser = modelMapper.map(user, User.class);
 
         System.out.println(user == modelMapperUser);

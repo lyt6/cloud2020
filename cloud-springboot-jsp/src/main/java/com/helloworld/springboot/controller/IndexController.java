@@ -16,9 +16,9 @@ public class IndexController {
     private PersonConfig personConfig;
 
     @RequestMapping("/")
-    public String toIndex(Model model){
+    public String toIndex(Model model) {
         model.addAttribute("personConfig", JSONObject.toJSONString(personConfig));
-        log.info("personConfig:{}",JSONObject.toJSONString(personConfig));
+        log.info("personConfig:{}", JSONObject.toJSONString(personConfig));
         return "index";
     }
 
