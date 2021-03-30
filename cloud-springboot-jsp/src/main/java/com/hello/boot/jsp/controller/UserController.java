@@ -47,13 +47,13 @@ public class UserController {
         return new ResponseEntity<>("created successfully", HttpStatus.OK);
     }
 
-    @PostMapping(value = "/delete/{id}")
+    @DeleteMapping(value = "/delete/{id}")
     public ResponseEntity<Object> delete(@PathVariable("id") String id) {
         userService.removeById(id);
         return new ResponseEntity<>("deleted successfully", HttpStatus.OK);
     }
 
-    @PostMapping(value = "/update")
+    @PutMapping(value = "/update")
     public ResponseEntity<Object> delete(@RequestBody User params) {
         userService.updateById(params);
         return new ResponseEntity<>("updated successfully", HttpStatus.OK);
