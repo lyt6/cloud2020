@@ -16,6 +16,7 @@
         <module>cloud-springboot-jsp</module>
         <module>cloud-codegen</module>
         <module>cloud-auth</module>
+        <module>cloud-doc</module>
     </modules>
 
     <!--统一管理jar包和版本-->
