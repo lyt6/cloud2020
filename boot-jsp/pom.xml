@@ -9,12 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-springboot-jsp</artifactId>
+    <artifactId>boot-jsp</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>com.hello.springcloud</groupId>
-            <artifactId>cloud-api-commons</artifactId>
+            <artifactId>cloud-api</artifactId>
             <version>${project.version}</version>
         </dependency>
         <!--web启动器-->

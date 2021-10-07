@@ -4,22 +4,30 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <groupId>org.springframework.boot</groupId>
+        <version>2.1.8.RELEASE</version>
+    </parent>
+
     <groupId>com.hello.springcloud</groupId>
     <artifactId>cloud2020</artifactId>
-    <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
     <modules>
-        <module>cloud-provider-payment</module>
-        <module>cloud-consumer-order</module>
-        <module>cloud-api-commons</module>
+        <module>cloud-payment</module>
+        <module>cloud-order</module>
+        <module>cloud-api</module>
         <module>cloud-eureka-server</module>
-        <module>cloud-springboot-jsp</module>
+        <module>boot-jsp</module>
         <module>cloud-codegen</module>
         <module>cloud-auth</module>
         <module>cloud-doc</module>
+        <module>cloud-monitor</module>
+        <module>cloud-monitor-client</module>
     </modules>
 
-    <!--统一管理jar包和版本-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -43,14 +51,7 @@
                 <version>${fastjson.version}</version>
             </dependency>
             <!-- Json -->
-            <!--spring boot 2.2.2-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.2.11.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
+
             <!--spring cloud Hoxton.SR1-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
