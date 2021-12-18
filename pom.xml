@@ -19,10 +19,9 @@
         <module>cloud-payment</module>
         <module>cloud-order</module>
         <module>cloud-api</module>
-        <module>cloud-eureka-server</module>
+        <module>cloud-eureka</module>
         <module>boot-jsp</module>
         <module>cloud-codegen</module>
-        <module>cloud-auth</module>
         <module>cloud-doc</module>
         <module>cloud-monitor</module>
         <module>cloud-monitor-client</module>
@@ -133,19 +132,6 @@
             <!-- knife4j -->
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <fork>true</fork>
-                    <addResources>true</addResources>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
     <repositories>
         <repository>
